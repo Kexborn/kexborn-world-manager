@@ -1,0 +1,181 @@
+{
+  "TYPES": {
+    "Actor": {
+      "kexborn-world-manager.special-place": "Lieu spécial",
+      "kexborn-world-manager.settlement": "Colonie",
+      "kexborn-world-manager.organization": "Organisation"
+    },
+    "Item": {
+      "kexborn-world-manager.faction": "Faction",
+      "kexborn-world-manager.city-structure": "Structure de la ville",
+      "kexborn-world-manager.organization-feature": "Caractéristique de l'organisation"
+    }
+  },
+  "KEXBORN": {
+    "Settings": {
+      "ThemeName": "Thème",
+      "ThemeHint": "Sélectionnez le style visuel pour les fiches (s'applique à tous les joueurs).",
+      "ThemeDND": "Classic ⦁ Light",
+      "ThemeDNDDark": "Classic ⦁ Dark",
+      "ThemeDark": "Dark Fantasy",
+      "ThemeScifiLightBlue": "Sci-Fi ⦁ Light blue",
+      "ThemeScifiDarkBlue": "Sci-Fi ⦁ Dark blue",
+      "ThemeScifiRed": "Sci-Fi ⦁ Red",
+      "ThemeScifiGreen": "Sci-Fi ⦁ Green",
+      "ThemeScifiOrange": "Sci-Fi ⦁ Orange",
+      "ThemeScifiViolet": "Sci-Fi ⦁ Violet",
+      "ThemeScifiGrey": "Sci-Fi ⦁ Grey",
+      "ThemeUniversal": "Universal ⦁ Light",
+      "ThemeUniversalDark": "Universal ⦁ Dark",
+      
+      "InfraViewName": "Affichage de l'infrastructure",
+      "InfraViewHint": "Choisissez l'apparence de l'onglet des structures dans les colonies.",
+      "InfraViewList": "Liste classique (glisser-déposer depuis les dossiers)",
+      "InfraViewTree": "Arbre de développement (boutons interactifs)",
+      
+      "EnableNpcsTabName": "Onglet : Visages familiers",
+      "EnableNpcsTabHint": "Afficher l'onglet des visages familiers dans les colonies.",
+      
+      "EnableInfraTabName": "Onglet : Infrastructure",
+      "EnableInfraTabHint": "Afficher l'onglet des structures dans les colonies.",
+      
+      "ShowSettlementStatsName": "Statistiques de la colonie",
+      "ShowSettlementStatsHint": "Affiche le bloc avec les points d'Armée, de Loi, de Culture, etc. sur l'onglet infrastructure de la colonie.",
+      
+      "EnableInfluenceTabName": "Onglet : Influence",
+      "EnableInfluenceTabHint": "Afficher l'onglet des factions et organisations.",
+      
+      "GenreMenuName": "Éditeur de genres et catégories",
+      "GenreMenuLabel": "Ouvrir l'éditeur",
+      "GenreMenuHint": "Personnalisez la liste des structures disponibles pour la Fantasy, la Sci-Fi et l'Époque Moderne.",
+      "GenreMenuTitle": "Paramètres des genres et catégories"
+    },
+    
+    "Genres": {
+      "Fantasy": "Fantasy",
+      "Modern": "Époque Moderne",
+      "Scifi": "Sci-Fi",
+      "Universal": "Universel (Multigenre)"
+    },
+    
+    "Categories": {
+      "Power": "Pouvoir et Loi",
+      "Cult": "Culte et Bien-être",
+      "Entertainment": "Loisirs et Divertissement",
+      "Education": "Science et Éducation",
+      "EducationTech": "Science et Technologie",
+      "Industry": "Industrie",
+      "Trade": "Commerce et Logistique",
+      "Military": "Militaire et Guerre",
+      "Special": "Spécial",
+      "NewCategory": "Nouvelle Catégorie"
+    },
+    
+    "Tabs": {
+      "Description": "Description",
+      "NPCs": "Visages familiers",
+      "Infrastructure": "Infrastructure",
+      "Influence": "Influence",
+      "Stats": "Statistiques",
+      "Bonuses": "Bonus",
+      "Factions": "Factions",
+      "Organizations": "Organisations"
+    },
+    
+    "Stats": {
+      "Army": "Armée",
+      "Law": "Loi",
+      "Culture": "Culture",
+      "Wealth": "Richesse",
+      "Health": "Santé",
+      "Science": "Science",
+      "Attack": "Attaque",
+      "Resources": "Ressources",
+      "Vitality": "Vitalité",
+      "Zeal": "Zèle",
+      "Influence": "Influence"
+    },
+    
+    "OrgSubtypes": {
+      "Title": "Sous-types d'organisation",
+      "Strongmen": "Costauds",
+      "Agility": "Acrobates",
+      "Sages": "Érudits"
+    },
+    
+    "UI": {
+      "Level": "NIVEAU",
+      "LevelNormal": "Niveau",
+      "Genre": "Genre",
+      "Category": "Catégorie",
+      "Priority": "Priorité",
+      "Features": "Caractéristiques",
+      "SettlementGenre": "Genre de la colonie :",
+      "RequiredStructures": "Structures requises\n(Liens pour l'arbre) :",
+      
+      "Placeholders": {
+        "SettlementName": "Nom de la colonie",
+        "OrganizationName": "Nom de l'organisation",
+        "FactionName": "Nom de la faction",
+        "StructureName": "Nom de la structure",
+        "FeatureName": "Nom de la caractéristique",
+        "SpecialPlaceName": "Nom du lieu spécial",
+        "Link1": "Lien 1",
+        "Link2": "Lien 2",
+        "Link3": "Lien 3"
+      },
+      
+      "Tooltips": {
+        "ChangeBanner": "Cliquez pour changer l'image",
+        "LockToggle": "Basculer le verrouillage",
+        "RemoveFromCity": "Retirer de la ville",
+        "Remove": "Retirer",
+        "StructureLevel": "Niveau de la structure",
+        "PriorityHint": "Plus le nombre est bas, plus le bâtiment est haut (0 - tout en haut)",
+        "GenreChangeHint": "(Changer de genre modifiera la liste des catégories disponibles)",
+        "Show": "Afficher",
+        "Hide": "Masquer",
+        "DeleteForever": "Supprimer définitivement",
+        "DefaultCategory": "Catégorie par défaut",
+        "ChangePortrait": "Changer le portrait de l'acteur (pour Image Hover)"
+      },
+      
+      "Notes": {
+        "BonusesHint": "Indiquez quelles statistiques s'améliorent ou diminuent (vous pouvez entrer des nombres négatifs, ex. -1).",
+        "GenreMenuDesc": "Ici, vous pouvez configurer les catégories pour chaque genre. Les catégories standard ne peuvent pas être supprimées, mais peuvent être masquées.",
+        "PortraitHoverText1": "Portrait de l'acteur (Image Hover) :",
+        "PortraitHoverText2": "Cliquez sur l'icône à gauche pour télécharger un PNG transparent.",
+        "PortraitHoverText3": "Cela remplacera l'image standard de Foundry lors du survol d'un token invisible."
+      },
+      
+      "Buttons": {
+        "AddCategory": "Ajouter une catégorie personnalisée",
+        "SaveSettings": "Enregistrer les paramètres"
+      },
+      
+      "Table": {
+        "CategoryName": "Nom de la catégorie",
+        "Actions": "Actions"
+      }
+    },
+    
+    "Notifications": {
+      "UnlockToEdit": "Déverrouillez la fiche pour ajouter des objets.",
+      "UnlockToEditInfra": "Déverrouillez la fiche (icône de cadenas) pour modifier l'infrastructure.",
+      "OrgAlreadyAdded": "L'organisation a déjà été ajoutée.",
+      "NpcAlreadyAdded": "Le personnage a déjà été ajouté.",
+      "AlreadyAdded": "\"{name}\" est déjà ajouté(e) !",
+      "LevelTooHigh": "Impossible de construire ! Le niveau du bâtiment ({itemLvl}) est supérieur au niveau de la ville ({cityLvl}).",
+      "OnlyFeaturesAllowed": "Vous ne pouvez ajouter que des caractéristiques à une organisation !",
+      "BuildPrerequisitesFirst": "Construisez d'abord les structures requises !",
+      "OriginalNotFound": "Bâtiment d'origine introuvable dans le monde !"
+    },
+    
+    "Tree": {
+      "Required": "Requis :",
+      "RequiredCityLevel": "Niveau de ville requis :",
+      "CurrentLevel": "Actuel :",
+      "ControlsHint": "Clic Gauche - construire/démolir<br/>Clic Droit - ouvrir les détails"
+    }
+  }
+}

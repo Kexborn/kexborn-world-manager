@@ -1,0 +1,181 @@
+{
+  "TYPES": {
+    "Actor": {
+      "kexborn-world-manager.special-place": "Special Place",
+      "kexborn-world-manager.settlement": "Settlement",
+      "kexborn-world-manager.organization": "Organization"
+    },
+    "Item": {
+      "kexborn-world-manager.faction": "Faction",
+      "kexborn-world-manager.city-structure": "City Structure",
+      "kexborn-world-manager.organization-feature": "Organization Feature"
+    }
+  },
+  "KEXBORN": {
+    "Settings": {
+      "ThemeName": "Theme",
+      "ThemeHint": "Select the visual style for the sheets (applies to all players).",
+      "ThemeDND": "Classic ⦁ Light",
+      "ThemeDNDDark": "Classic ⦁ Dark",
+      "ThemeDark": "Dark Fantasy",
+      "ThemeScifiLightBlue": "Sci-Fi ⦁ Light blue",
+      "ThemeScifiDarkBlue": "Sci-Fi ⦁ Dark blue",
+      "ThemeScifiRed": "Sci-Fi ⦁ Red",
+      "ThemeScifiGreen": "Sci-Fi ⦁ Green",
+      "ThemeScifiOrange": "Sci-Fi ⦁ Orange",
+      "ThemeScifiViolet": "Sci-Fi ⦁ Violet",
+      "ThemeScifiGrey": "Sci-Fi ⦁ Grey",
+      "ThemeUniversal": "Universal ⦁ Light",
+      "ThemeUniversalDark": "Universal ⦁ Dark",
+      
+      "InfraViewName": "Infrastructure Display",
+      "InfraViewHint": "Choose how the structures tab will look in settlements.",
+      "InfraViewList": "Classic List (drag and drop from folders)",
+      "InfraViewTree": "Development Tree (interactive buttons)",
+      
+      "EnableNpcsTabName": "Tab: Familiar Faces",
+      "EnableNpcsTabHint": "Show the familiar faces tab in settlements.",
+      
+      "EnableInfraTabName": "Tab: Infrastructure",
+      "EnableInfraTabHint": "Show the structures tab in settlements.",
+      
+      "ShowSettlementStatsName": "Settlement Stats",
+      "ShowSettlementStatsHint": "Displays the block with Army, Law, Culture, etc. points on the settlement infrastructure tab.",
+      
+      "EnableInfluenceTabName": "Tab: Influence",
+      "EnableInfluenceTabHint": "Show the factions and organizations tab.",
+      
+      "GenreMenuName": "Genres and Categories Editor",
+      "GenreMenuLabel": "Open Editor",
+      "GenreMenuHint": "Customize the list of available structures for Fantasy, Sci-Fi, and Modern Day.",
+      "GenreMenuTitle": "Genres and Categories Settings"
+    },
+    
+    "Genres": {
+      "Fantasy": "Fantasy",
+      "Modern": "Modern Day",
+      "Scifi": "Sci-Fi",
+      "Universal": "Universal (Multi-genre)"
+    },
+    
+    "Categories": {
+      "Power": "Power & Law",
+      "Cult": "Cult & Welfare",
+      "Entertainment": "Leisure & Entertainment",
+      "Education": "Science & Education",
+      "EducationTech": "Science & Technology",
+      "Industry": "Industry",
+      "Trade": "Trade & Logistics",
+      "Military": "Military & War",
+      "Special": "Special",
+      "NewCategory": "New Category"
+    },
+    
+    "Tabs": {
+      "Description": "Description",
+      "NPCs": "Familiar Faces",
+      "Infrastructure": "Infrastructure",
+      "Influence": "Influence",
+      "Stats": "Stats",
+      "Bonuses": "Bonuses",
+      "Factions": "Factions",
+      "Organizations": "Organizations"
+    },
+    
+    "Stats": {
+      "Army": "Army",
+      "Law": "Law",
+      "Culture": "Culture",
+      "Wealth": "Wealth",
+      "Health": "Health",
+      "Science": "Science",
+      "Attack": "Attack",
+      "Resources": "Resources",
+      "Vitality": "Vitality",
+      "Zeal": "Zeal",
+      "Influence": "Influence"
+    },
+    
+    "OrgSubtypes": {
+      "Title": "Organization Subtypes",
+      "Strongmen": "Strongmen",
+      "Agility": "Acrobats",
+      "Sages": "Sages"
+    },
+    
+    "UI": {
+      "Level": "LEVEL",
+      "LevelNormal": "Level",
+      "Genre": "Genre",
+      "Category": "Category",
+      "Priority": "Priority",
+      "Features": "Features",
+      "SettlementGenre": "Settlement Genre:",
+      "RequiredStructures": "Required structures\n(Tree links):",
+      
+      "Placeholders": {
+        "SettlementName": "Settlement Name",
+        "OrganizationName": "Organization Name",
+        "FactionName": "Faction Name",
+        "StructureName": "Structure Name",
+        "FeatureName": "Feature Name",
+        "SpecialPlaceName": "Special Place Name",
+        "Link1": "Link 1",
+        "Link2": "Link 2",
+        "Link3": "Link 3"
+      },
+      
+      "Tooltips": {
+        "ChangeBanner": "Click to change image",
+        "LockToggle": "Toggle edit lock",
+        "RemoveFromCity": "Remove from city",
+        "Remove": "Remove",
+        "StructureLevel": "Structure Level",
+        "PriorityHint": "The lower the number, the higher the building (0 - at the very top)",
+        "GenreChangeHint": "(Changing the genre will alter the list of available categories)",
+        "Show": "Show",
+        "Hide": "Hide",
+        "DeleteForever": "Delete forever",
+        "DefaultCategory": "Default category",
+        "ChangePortrait": "Change actor portrait (for Image Hover)"
+      },
+      
+      "Notes": {
+        "BonusesHint": "Specify which stats improve or decrease (you can enter negative numbers, e.g., -1).",
+        "GenreMenuDesc": "Here you can configure categories for each genre. Standard categories cannot be deleted, but they can be hidden.",
+        "PortraitHoverText1": "Actor Portrait (Image Hover):",
+        "PortraitHoverText2": "Click the icon on the left to upload a transparent PNG.",
+        "PortraitHoverText3": "This will replace the standard Foundry image when hovering over an invisible token."
+      },
+      
+      "Buttons": {
+        "AddCategory": "Add Custom Category",
+        "SaveSettings": "Save Settings"
+      },
+      
+      "Table": {
+        "CategoryName": "Category Name",
+        "Actions": "Actions"
+      }
+    },
+    
+    "Notifications": {
+      "UnlockToEdit": "Unlock the sheet to add objects.",
+      "UnlockToEditInfra": "Unlock the sheet (lock icon) to modify infrastructure.",
+      "OrgAlreadyAdded": "Organization has already been added.",
+      "NpcAlreadyAdded": "Character has already been added.",
+      "AlreadyAdded": "\"{name}\" is already added!",
+      "LevelTooHigh": "Cannot build! Building level ({itemLvl}) is higher than the city level ({cityLvl}).",
+      "OnlyFeaturesAllowed": "You can only add Features to an organization!",
+      "BuildPrerequisitesFirst": "Build the required structures first!",
+      "OriginalNotFound": "Original building not found in the world!"
+    },
+    
+    "Tree": {
+      "Required": "Required:",
+      "RequiredCityLevel": "Required city level:",
+      "CurrentLevel": "Current:",
+      "ControlsHint": "LMB - build/demolish<br/>RMB - open details"
+    }
+  }
+}

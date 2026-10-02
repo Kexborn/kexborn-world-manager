@@ -1,0 +1,181 @@
+{
+  "TYPES": {
+    "Actor": {
+      "kexborn-world-manager.special-place": "特殊地点",
+      "kexborn-world-manager.settlement": "定居点",
+      "kexborn-world-manager.organization": "组织"
+    },
+    "Item": {
+      "kexborn-world-manager.faction": "派系",
+      "kexborn-world-manager.city-structure": "城市建筑",
+      "kexborn-world-manager.organization-feature": "组织特征"
+    }
+  },
+  "KEXBORN": {
+    "Settings": {
+      "ThemeName": "主题",
+      "ThemeHint": "选择角色卡的视觉风格（适用于所有玩家）。",
+      "ThemeDND": "Classic ⦁ Light",
+      "ThemeDNDDark": "Classic ⦁ Dark",
+      "ThemeDark": "Dark Fantasy",
+      "ThemeScifiLightBlue": "Sci-Fi ⦁ Light blue",
+      "ThemeScifiDarkBlue": "Sci-Fi ⦁ Dark blue",
+      "ThemeScifiRed": "Sci-Fi ⦁ Red",
+      "ThemeScifiGreen": "Sci-Fi ⦁ Green",
+      "ThemeScifiOrange": "Sci-Fi ⦁ Orange",
+      "ThemeScifiViolet": "Sci-Fi ⦁ Violet",
+      "ThemeScifiGrey": "Sci-Fi ⦁ Grey",
+      "ThemeUniversal": "Universal ⦁ Light",
+      "ThemeUniversalDark": "Universal ⦁ Dark",
+      
+      "InfraViewName": "基础设施显示",
+      "InfraViewHint": "选择定居点中建筑选项卡的显示方式。",
+      "InfraViewList": "经典列表（从文件夹中拖放）",
+      "InfraViewTree": "发展树（交互式按钮）",
+      
+      "EnableNpcsTabName": "选项卡：熟面孔",
+      "EnableNpcsTabHint": "在定居点中显示熟面孔选项卡。",
+      
+      "EnableInfraTabName": "选项卡：基础设施",
+      "EnableInfraTabHint": "在定居点中显示建筑选项卡。",
+      
+      "ShowSettlementStatsName": "定居点统计",
+      "ShowSettlementStatsHint": "在定居点的基础设施选项卡上显示包含军队、法律、文化等点数的区块。",
+      
+      "EnableInfluenceTabName": "选项卡：影响力",
+      "EnableInfluenceTabHint": "显示派系和组织选项卡。",
+      
+      "GenreMenuName": "题材和类别编辑器",
+      "GenreMenuLabel": "打开编辑器",
+      "GenreMenuHint": "自定义奇幻、科幻和现代可用建筑的列表。",
+      "GenreMenuTitle": "题材和类别设置"
+    },
+    
+    "Genres": {
+      "Fantasy": "奇幻",
+      "Modern": "现代",
+      "Scifi": "科幻",
+      "Universal": "通用（多题材）"
+    },
+    
+    "Categories": {
+      "Power": "权力与法律",
+      "Cult": "信仰与福利",
+      "Entertainment": "休闲与娱乐",
+      "Education": "科学与教育",
+      "EducationTech": "科学与技术",
+      "Industry": "工业",
+      "Trade": "贸易与物流",
+      "Military": "军事与战争",
+      "Special": "特殊",
+      "NewCategory": "新类别"
+    },
+    
+    "Tabs": {
+      "Description": "描述",
+      "NPCs": "熟面孔",
+      "Infrastructure": "基础设施",
+      "Influence": "影响力",
+      "Stats": "统计",
+      "Bonuses": "加成",
+      "Factions": "派系",
+      "Organizations": "组织"
+    },
+    
+    "Stats": {
+      "Army": "军队",
+      "Law": "法律",
+      "Culture": "文化",
+      "Wealth": "财富",
+      "Health": "健康",
+      "Science": "科学",
+      "Attack": "攻击",
+      "Resources": "资源",
+      "Vitality": "生命力",
+      "Zeal": "狂热",
+      "Influence": "影响力"
+    },
+    
+    "OrgSubtypes": {
+      "Title": "组织子类型",
+      "Strongmen": "壮汉",
+      "Agility": "杂技",
+      "Sages": "智者"
+    },
+    
+    "UI": {
+      "Level": "等级",
+      "LevelNormal": "等级",
+      "Genre": "题材",
+      "Category": "类别",
+      "Priority": "优先级",
+      "Features": "特征",
+      "SettlementGenre": "定居点题材：",
+      "RequiredStructures": "所需建筑\n（树状链接）：",
+      
+      "Placeholders": {
+        "SettlementName": "定居点名称",
+        "OrganizationName": "组织名称",
+        "FactionName": "派系名称",
+        "StructureName": "建筑名称",
+        "FeatureName": "特征名称",
+        "SpecialPlaceName": "特殊地点名称",
+        "Link1": "链接 1",
+        "Link2": "链接 2",
+        "Link3": "链接 3"
+      },
+      
+      "Tooltips": {
+        "ChangeBanner": "点击更改图片",
+        "LockToggle": "切换编辑锁定",
+        "RemoveFromCity": "从城市中移除",
+        "Remove": "移除",
+        "StructureLevel": "建筑等级",
+        "PriorityHint": "数字越小，建筑越靠上（0 - 在最顶部）",
+        "GenreChangeHint": "（更改题材将改变可用类别列表）",
+        "Show": "显示",
+        "Hide": "隐藏",
+        "DeleteForever": "永久删除",
+        "DefaultCategory": "默认类别",
+        "ChangePortrait": "更改角色肖像（用于图片悬停 Image Hover）"
+      },
+      
+      "Notes": {
+        "BonusesHint": "指定哪些统计数据会提高或降低（可以输入负数，例如 -1）。",
+        "GenreMenuDesc": "在这里您可以配置每个题材的类别。标准类别无法删除，但可以隐藏。",
+        "PortraitHoverText1": "角色肖像（图片悬停）：",
+        "PortraitHoverText2": "点击左侧图标上传透明PNG图片。",
+        "PortraitHoverText3": "当鼠标悬停在隐形代币上时，这将取代Foundry的标准图像。"
+      },
+      
+      "Buttons": {
+        "AddCategory": "添加自定义类别",
+        "SaveSettings": "保存设置"
+      },
+      
+      "Table": {
+        "CategoryName": "类别名称",
+        "Actions": "操作"
+      }
+    },
+    
+    "Notifications": {
+      "UnlockToEdit": "解锁角色卡以添加对象。",
+      "UnlockToEditInfra": "解锁角色卡（锁形图标）以修改基础设施。",
+      "OrgAlreadyAdded": "该组织已被添加。",
+      "NpcAlreadyAdded": "该角色已被添加。",
+      "AlreadyAdded": "“{name}”已添加！",
+      "LevelTooHigh": "无法建造！建筑等级（{itemLvl}）高于城市等级（{cityLvl}）。",
+      "OnlyFeaturesAllowed": "您只能将“特征”添加到组织中！",
+      "BuildPrerequisitesFirst": "请先建造所需建筑！",
+      "OriginalNotFound": "在世界中未找到原始建筑！"
+    },
+    
+    "Tree": {
+      "Required": "需要：",
+      "RequiredCityLevel": "需要城市等级：",
+      "CurrentLevel": "当前：",
+      "ControlsHint": "左键 - 建造/拆除<br/>右键 - 打开详情"
+    }
+  }
+}

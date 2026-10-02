@@ -1,0 +1,181 @@
+{
+  "TYPES": {
+    "Actor": {
+      "kexborn-world-manager.special-place": "Szczególne miejsce",
+      "kexborn-world-manager.settlement": "Osada",
+      "kexborn-world-manager.organization": "Organizacja"
+    },
+    "Item": {
+      "kexborn-world-manager.faction": "Frakcja",
+      "kexborn-world-manager.city-structure": "Struktura miasta",
+      "kexborn-world-manager.organization-feature": "Cecha organizacji"
+    }
+  },
+  "KEXBORN": {
+    "Settings": {
+      "ThemeName": "Motyw",
+      "ThemeHint": "Wybierz styl wizualny dla kart (dotyczy wszystkich graczy).",
+      "ThemeDND": "Classic ⦁ Light",
+      "ThemeDNDDark": "Classic ⦁ Dark",
+      "ThemeDark": "Dark Fantasy",
+      "ThemeScifiLightBlue": "Sci-Fi ⦁ Light blue",
+      "ThemeScifiDarkBlue": "Sci-Fi ⦁ Dark blue",
+      "ThemeScifiRed": "Sci-Fi ⦁ Red",
+      "ThemeScifiGreen": "Sci-Fi ⦁ Green",
+      "ThemeScifiOrange": "Sci-Fi ⦁ Orange",
+      "ThemeScifiViolet": "Sci-Fi ⦁ Violet",
+      "ThemeScifiGrey": "Sci-Fi ⦁ Grey",
+      "ThemeUniversal": "Universal ⦁ Light",
+      "ThemeUniversalDark": "Universal ⦁ Dark",
+      
+      "InfraViewName": "Wyświetlanie infrastruktury",
+      "InfraViewHint": "Wybierz, jak będzie wyglądać zakładka struktur w osadach.",
+      "InfraViewList": "Klasyczna lista (przeciągnij i upuść z folderów)",
+      "InfraViewTree": "Drzewo rozwoju (interaktywne przyciski)",
+      
+      "EnableNpcsTabName": "Zakładka: Znajome twarze",
+      "EnableNpcsTabHint": "Pokaż zakładkę znajomych twarzy w osadach.",
+      
+      "EnableInfraTabName": "Zakładka: Infrastruktura",
+      "EnableInfraTabHint": "Pokaż zakładkę struktur w osadach.",
+      
+      "ShowSettlementStatsName": "Statystyki osady",
+      "ShowSettlementStatsHint": "Wyświetla blok z punktami Armii, Prawa, Kultury itp. w zakładce infrastruktury osady.",
+      
+      "EnableInfluenceTabName": "Zakładka: Wpływy",
+      "EnableInfluenceTabHint": "Pokaż zakładkę frakcji i organizacji.",
+      
+      "GenreMenuName": "Edytor gatunków i kategorii",
+      "GenreMenuLabel": "Otwórz edytor",
+      "GenreMenuHint": "Dostosuj listę dostępnych struktur dla Fantasy, Sci-Fi i Czasów współczesnych.",
+      "GenreMenuTitle": "Ustawienia gatunków i kategorii"
+    },
+    
+    "Genres": {
+      "Fantasy": "Fantasy",
+      "Modern": "Czasy współczesne",
+      "Scifi": "Sci-Fi",
+      "Universal": "Uniwersalny (Wielogatunkowy)"
+    },
+    
+    "Categories": {
+      "Power": "Władza i Prawo",
+      "Cult": "Kult i Dobrobyt",
+      "Entertainment": "Czas wolny i Rozrywka",
+      "Education": "Nauka i Edukacja",
+      "EducationTech": "Nauka i Technologia",
+      "Industry": "Przemysł",
+      "Trade": "Handel i Logistyka",
+      "Military": "Wojsko i Wojna",
+      "Special": "Specjalne",
+      "NewCategory": "Nowa kategoria"
+    },
+    
+    "Tabs": {
+      "Description": "Opis",
+      "NPCs": "Znajome twarze",
+      "Infrastructure": "Infrastruktura",
+      "Influence": "Wpływy",
+      "Stats": "Statystyki",
+      "Bonuses": "Premie",
+      "Factions": "Frakcje",
+      "Organizations": "Organizacje"
+    },
+    
+    "Stats": {
+      "Army": "Armia",
+      "Law": "Prawo",
+      "Culture": "Kultura",
+      "Wealth": "Bogactwo",
+      "Health": "Zdrowie",
+      "Science": "Nauka",
+      "Attack": "Atak",
+      "Resources": "Zasoby",
+      "Vitality": "Witalność",
+      "Zeal": "Zapał",
+      "Influence": "Wpływ"
+    },
+    
+    "OrgSubtypes": {
+      "Title": "Podtypy organizacji",
+      "Strongmen": "Siłacze",
+      "Agility": "Akrobaci",
+      "Sages": "Mędrcy"
+    },
+    
+    "UI": {
+      "Level": "POZIOM",
+      "LevelNormal": "Poziom",
+      "Genre": "Gatunek",
+      "Category": "Kategoria",
+      "Priority": "Priorytet",
+      "Features": "Cechy",
+      "SettlementGenre": "Gatunek osady:",
+      "RequiredStructures": "Wymagane struktury\n(Powiązania drzewa):",
+      
+      "Placeholders": {
+        "SettlementName": "Nazwa osady",
+        "OrganizationName": "Nazwa organizacji",
+        "FactionName": "Nazwa frakcji",
+        "StructureName": "Nazwa struktury",
+        "FeatureName": "Nazwa cechy",
+        "SpecialPlaceName": "Nazwa szczególnego miejsca",
+        "Link1": "Powiązanie 1",
+        "Link2": "Powiązanie 2",
+        "Link3": "Powiązanie 3"
+      },
+      
+      "Tooltips": {
+        "ChangeBanner": "Kliknij, aby zmienić obraz",
+        "LockToggle": "Przełącz blokadę edycji",
+        "RemoveFromCity": "Usuń z miasta",
+        "Remove": "Usuń",
+        "StructureLevel": "Poziom struktury",
+        "PriorityHint": "Im mniejsza liczba, tym wyżej znajduje się budynek (0 - na samej górze)",
+        "GenreChangeHint": "(Zmiana gatunku zmieni listę dostępnych kategorii)",
+        "Show": "Pokaż",
+        "Hide": "Ukryj",
+        "DeleteForever": "Usuń na zawsze",
+        "DefaultCategory": "Kategoria domyślna",
+        "ChangePortrait": "Zmień portret (dla Image Hover)"
+      },
+      
+      "Notes": {
+        "BonusesHint": "Określ, które statystyki ulegają poprawie lub pogorszeniu (możesz wpisać liczby ujemne, np. -1).",
+        "GenreMenuDesc": "Tutaj możesz skonfigurować kategorie dla każdego gatunku. Standardowych kategorii nie można usunąć, ale można je ukryć.",
+        "PortraitHoverText1": "Portret aktora (Image Hover):",
+        "PortraitHoverText2": "Kliknij ikonę po lewej stronie, aby przesłać przezroczysty plik PNG.",
+        "PortraitHoverText3": "Zastąpi to standardowy obraz Foundry po najechaniu kursorem na niewidzialny token."
+      },
+      
+      "Buttons": {
+        "AddCategory": "Dodaj własną kategorię",
+        "SaveSettings": "Zapisz ustawienia"
+      },
+      
+      "Table": {
+        "CategoryName": "Nazwa kategorii",
+        "Actions": "Akcje"
+      }
+    },
+    
+    "Notifications": {
+      "UnlockToEdit": "Odblokuj kartę, aby dodawać obiekty.",
+      "UnlockToEditInfra": "Odblokuj kartę (ikona kłódki), aby modyfikować infrastrukturę.",
+      "OrgAlreadyAdded": "Organizacja została już dodana.",
+      "NpcAlreadyAdded": "Postać została już dodana.",
+      "AlreadyAdded": "\"{name}\" jest już dodane!",
+      "LevelTooHigh": "Nie można zbudować! Poziom budynku ({itemLvl}) jest wyższy niż poziom miasta ({cityLvl}).",
+      "OnlyFeaturesAllowed": "Do organizacji możesz dodawać tylko Cechy!",
+      "BuildPrerequisitesFirst": "Najpierw zbuduj wymagane struktury!",
+      "OriginalNotFound": "Nie znaleziono oryginalnego budynku w świecie!"
+    },
+    
+    "Tree": {
+      "Required": "Wymagane:",
+      "RequiredCityLevel": "Wymagany poziom miasta:",
+      "CurrentLevel": "Obecny:",
+      "ControlsHint": "LPM - buduj/burz<br/>PPM - otwórz szczegóły"
+    }
+  }
+}

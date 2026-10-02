@@ -1,0 +1,181 @@
+{
+  "TYPES": {
+    "Actor": {
+      "kexborn-world-manager.special-place": "Особое место",
+      "kexborn-world-manager.settlement": "Поселение",
+      "kexborn-world-manager.organization": "Организация"
+    },
+    "Item": {
+      "kexborn-world-manager.faction": "Фракция",
+      "kexborn-world-manager.city-structure": "Городское сооружение",
+      "kexborn-world-manager.organization-feature": "Особенность организации"
+    }
+  },
+  "KEXBORN": {
+    "Settings": {
+      "ThemeName": "Тема оформления",
+      "ThemeHint": "Выберите визуальный стиль для листов (настройка применится для всех игроков).",
+      "ThemeDND": "Classic ⦁ Light",
+      "ThemeDNDDark": "Classic ⦁ Dark",
+      "ThemeDark": "Dark Fantasy",
+      "ThemeScifiLightBlue": "Sci-Fi ⦁ Light blue",
+      "ThemeScifiDarkBlue": "Sci-Fi ⦁ Dark blue",
+      "ThemeScifiRed": "Sci-Fi ⦁ Red",
+      "ThemeScifiGreen": "Sci-Fi ⦁ Green",
+      "ThemeScifiOrange": "Sci-Fi ⦁ Orange",
+      "ThemeScifiViolet": "Sci-Fi ⦁ Violet",
+      "ThemeScifiGrey": "Sci-Fi ⦁ Grey",
+      "ThemeUniversal": "Universal ⦁ Light",
+      "ThemeUniversalDark": "Universal ⦁ Dark",
+      
+      "InfraViewName": "Отображение инфраструктуры",
+      "InfraViewHint": "Выберите, как будет выглядеть вкладка сооружений в поселениях.",
+      "InfraViewList": "Классический список (перетаскивание из папок)",
+      "InfraViewTree": "Дерево развития (интерактивные кнопки)",
+      
+      "EnableNpcsTabName": "Вкладка: Знакомые лица",
+      "EnableNpcsTabHint": "Показывать вкладку знакомых в поселениях.",
+      
+      "EnableInfraTabName": "Вкладка: Инфраструктура",
+      "EnableInfraTabHint": "Показывать вкладку зданий в поселениях.",
+      
+      "ShowSettlementStatsName": "Характеристики поселения",
+      "ShowSettlementStatsHint": "Отображает блок с очками Армии, Закона, Культуры и т.д. на вкладке инфраструктуры поселения.",
+      
+      "EnableInfluenceTabName": "Вкладка: Влияние",
+      "EnableInfluenceTabHint": "Показывать вкладку фракций и организаций.",
+      
+      "GenreMenuName": "Редактор жанров и категорий",
+      "GenreMenuLabel": "Открыть редактор",
+      "GenreMenuHint": "Настройте список доступных сооружений для Фентези, Космоса и Наших дней.",
+      "GenreMenuTitle": "Настройка жанров и категорий"
+    },
+    
+    "Genres": {
+      "Fantasy": "Фентези",
+      "Modern": "Наши дни",
+      "Scifi": "Космос",
+      "Universal": "Всеобщие (Мультижанровые)"
+    },
+    
+    "Categories": {
+      "Power": "Власть и закон",
+      "Cult": "Культ и благо",
+      "Entertainment": "Досуг и развлечения",
+      "Education": "Наука и образование",
+      "EducationTech": "Наука и технологии",
+      "Industry": "Промышленность",
+      "Trade": "Торговля и логистика",
+      "Military": "Армия и война",
+      "Special": "Особые",
+      "NewCategory": "Новая категория"
+    },
+    
+    "Tabs": {
+      "Description": "Описание",
+      "NPCs": "Знакомые лица",
+      "Infrastructure": "Инфраструктура",
+      "Influence": "Влияние",
+      "Stats": "Характеристики",
+      "Bonuses": "Бонусы",
+      "Factions": "Фракции",
+      "Organizations": "Организации"
+    },
+    
+    "Stats": {
+      "Army": "Армия",
+      "Law": "Закон",
+      "Culture": "Культура",
+      "Wealth": "Блага",
+      "Health": "Здравие",
+      "Science": "Наука",
+      "Attack": "Атака",
+      "Resources": "Ресурсы",
+      "Vitality": "Живучесть",
+      "Zeal": "Рвение",
+      "Influence": "Влияние"
+    },
+    
+    "OrgSubtypes": {
+      "Title": "Подтипы организации",
+      "Strongmen": "Силачи",
+      "Agility": "Ловкачи",
+      "Sages": "Знатоки"
+    },
+    
+    "UI": {
+      "Level": "УРОВЕНЬ",
+      "LevelNormal": "Уровень",
+      "Genre": "Жанр",
+      "Category": "Категория",
+      "Priority": "Приоритет",
+      "Features": "Особенности",
+      "SettlementGenre": "Жанр поселения:",
+      "RequiredStructures": "Требуемые сооружения\n(Связи для дерева):",
+      
+      "Placeholders": {
+        "SettlementName": "Название поселения",
+        "OrganizationName": "Название организации",
+        "FactionName": "Название фракции",
+        "StructureName": "Название сооружения",
+        "FeatureName": "Название особенности",
+        "SpecialPlaceName": "Название особого места",
+        "Link1": "Связь 1",
+        "Link2": "Связь 2",
+        "Link3": "Связь 3"
+      },
+      
+      "Tooltips": {
+        "ChangeBanner": "Нажмите, чтобы изменить картинку",
+        "LockToggle": "Блокировка редактирования",
+        "RemoveFromCity": "Удалить из города",
+        "Remove": "Удалить",
+        "StructureLevel": "Уровень сооружения",
+        "PriorityHint": "Чем меньше число, тем выше здание (0 - самый верх)",
+        "GenreChangeHint": "(Смена жанра изменит список доступных категорий)",
+        "Show": "Показать",
+        "Hide": "Скрыть",
+        "DeleteForever": "Удалить навсегда",
+        "DefaultCategory": "Базовая категория",
+        "ChangePortrait": "Изменить портрет актера (для Image Hover)"
+      },
+      
+      "Notes": {
+        "BonusesHint": "Укажите, какие характеристики улучшаются или ухудшаются (можно вводить отрицательные числа, например -1).",
+        "GenreMenuDesc": "Здесь вы можете настроить категории для каждого жанра. Стандартные категории нельзя удалить, но можно скрыть.",
+        "PortraitHoverText1": "Портрет актера (Image Hover):",
+        "PortraitHoverText2": "Нажмите на иконку слева, чтобы загрузить прозрачный PNG.",
+        "PortraitHoverText3": "Это заменит стандартную картинку Foundry при наведении мыши на невидимый токен."
+      },
+      
+      "Buttons": {
+        "AddCategory": "Добавить свою категорию",
+        "SaveSettings": "Сохранить настройки"
+      },
+      
+      "Table": {
+        "CategoryName": "Название категории",
+        "Actions": "Действия"
+      }
+    },
+    
+    "Notifications": {
+      "UnlockToEdit": "Разблокируйте лист, чтобы добавить объекты.",
+      "UnlockToEditInfra": "Разблокируйте лист (иконка замка), чтобы изменять инфраструктуру.",
+      "OrgAlreadyAdded": "Организация уже добавлена.",
+      "NpcAlreadyAdded": "Персонаж уже добавлен.",
+      "AlreadyAdded": "\"{name}\" уже добавлено!",
+      "LevelTooHigh": "Невозможно построить! Уровень здания ({itemLvl}) выше уровня города ({cityLvl}).",
+      "OnlyFeaturesAllowed": "В организацию можно добавлять только её Особенности!",
+      "BuildPrerequisitesFirst": "Сначала постройте требуемые сооружения!",
+      "OriginalNotFound": "Оригинал здания не найден в мире!"
+    },
+    
+    "Tree": {
+      "Required": "Требуется:",
+      "RequiredCityLevel": "Требуется уровень города:",
+      "CurrentLevel": "Текущий:",
+      "ControlsHint": "ЛКМ - построить/снести<br/>ПКМ - открыть подробности"
+    }
+  }
+}

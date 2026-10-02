@@ -1,0 +1,22 @@
+<form class="{{cssClass}} flexcol kbm-window theme-{{theme}}" autocomplete="off" style="padding: 15px; height: 100%;">
+    <header class="sheet-header" style="margin-bottom: 15px; flex: 0 0 auto; display: flex; flex-direction: column;">
+        <div style="display: flex; flex-direction: row; align-items: center; border-bottom: 2px solid; padding-bottom: 5px; margin-bottom: 15px; width: 100%;">
+            <input name="name" type="text" value="{{docName}}" placeholder="{{localize 'KEXBORN.UI.Placeholders.SpecialPlaceName'}}" style="width: 100%; font-size: 32px; background: transparent; border: none; padding: 0; margin: 0; min-width: 0;"/>
+        </div>
+        <img src="{{#if system.banner}}{{system.banner}}{{else}}icons/svg/mountain.svg{{/if}}" data-edit="system.banner" style="width: 100%; height: 200px; object-fit: cover; border: 2px solid; border-radius: 5px; cursor: pointer; display: block; background: var(--kbm-panel);" title="{{localize 'KEXBORN.UI.Tooltips.ChangeBanner'}}"/>
+    </header>
+    <section class="sheet-body" style="flex: 1; overflow-y: auto; padding-right: 5px;">
+        <h2 style="border-bottom: 1px solid; margin-bottom: 15px; text-transform: uppercase;">{{localize 'KEXBORN.Tabs.Description'}}</h2>
+        <div class="prose-editor-container">
+            {{editor enrichedDescription target="system.description" button=true editable=editable engine="prosemirror" collaborate=false}}
+        </div>
+
+        <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px; border-top: 1px dashed var(--kbm-border-subtle); padding-top: 10px;">
+            <img src="{{actor.img}}" data-edit="img" style="flex: 0 0 40px; width: 40px; height: 40px; border: 1px solid var(--kbm-border); border-radius: 3px; cursor: pointer; background: rgba(0,0,0,0.1); object-fit: cover;" title="{{localize 'KEXBORN.UI.Tooltips.ChangePortrait'}}"/>
+            <div style="font-size: 12px; color: var(--kbm-text-muted); line-height: 1.2;">
+                <b>{{localize 'KEXBORN.UI.Notes.PortraitHoverText1'}}</b> {{localize 'KEXBORN.UI.Notes.PortraitHoverText2'}}<br>
+                <i>{{localize 'KEXBORN.UI.Notes.PortraitHoverText3'}}</i>
+            </div>
+        </div>
+    </section>
+</form>

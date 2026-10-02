@@ -1,0 +1,53 @@
+<form autocomplete="off" class="kexborn-genres-form">
+    <p class="notes">{{localize 'KEXBORN.UI.Notes.GenreMenuDesc'}}</p>
+    
+    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+        <select name="activeTab" class="genre-selector" style="flex: 1; font-weight: bold; font-size: 16px;">
+            {{#each genres as |genre genreId|}}
+            <option value="{{genreId}}" {{#if (eq genreId ../activeTab)}}selected{{/if}}>{{genre.name}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="genres-container">
+        {{#each genres as |genre genreId|}}
+        <div class="genre-tab" data-tab="{{genreId}}" style="display: {{#if (eq genreId ../activeTab)}}block{{else}}none{{/if}};">
+            <table style="margin-bottom: 10px;">
+                <tr>
+                    <th style="text-align: left;">{{localize 'KEXBORN.UI.Table.CategoryName'}}</th>
+                    <th style="width: 80px; text-align: center;">{{localize 'KEXBORN.UI.Table.Actions'}}</th>
+                </tr>
+                {{#each genre.categories as |cat catId|}}
+                <tr>
+                    <td>
+                        <input type="text" name="{{genreId}}.categories.{{catId}}.label" value="{{cat.label}}" {{#if cat.default}}readonly style="background: rgba(0,0,0,0.05);" title="{{localize 'KEXBORN.UI.Tooltips.DefaultCategory'}}"{{/if}}/>
+                    </td>
+                    <td style="text-align: center;">
+                        <input type="hidden" name="{{genreId}}.categories.{{catId}}.default" value="{{cat.default}}" data-dtype="Boolean">
+                        <input type="hidden" name="{{genreId}}.categories.{{catId}}.hidden" value="{{cat.hidden}}" class="hidden-flag" data-dtype="Boolean">
+                        
+                        {{#if cat.default}}
+                            <a class="toggle-hide" data-genre="{{genreId}}" data-category="{{catId}}" title="{{#if cat.hidden}}{{localize 'KEXBORN.UI.Tooltips.Show'}}{{else}}{{localize 'KEXBORN.UI.Tooltips.Hide'}}{{/if}}">
+                                <i class="fas {{#if cat.hidden}}fa-eye-slash{{else}}fa-eye{{/if}}" style="color: {{#if cat.hidden}}#ff6b6b{{else}}#4a5{{/if}};"></i>
+                            </a>
+                        {{else}}
+                            <a class="delete-cat" data-genre="{{genreId}}" data-category="{{catId}}" title="{{localize 'KEXBORN.UI.Tooltips.DeleteForever'}}">
+                                <i class="fas fa-trash" style="color: #ff6b6b;"></i>
+                            </a>
+                        {{/if}}
+                    </td>
+                </tr>
+                {{/each}}
+            </table>
+            
+            <button type="button" class="add-cat" data-genre="{{genreId}}">
+                <i class="fas fa-plus"></i> {{localize 'KEXBORN.UI.Buttons.AddCategory'}}
+            </button>
+        </div>
+        {{/each}}
+    </div>
+
+    <footer class="sheet-footer flexrow" style="margin-top: 15px;">
+        <button type="submit" name="submit"><i class="fas fa-save"></i> {{localize 'KEXBORN.UI.Buttons.SaveSettings'}}</button>
+    </footer>
+</form>

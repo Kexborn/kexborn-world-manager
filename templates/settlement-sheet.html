@@ -1,0 +1,224 @@
+<form class="{{cssClass}} kbm-window settlement-form theme-{{theme}}" autocomplete="off">
+    <div class="sheet-main" style="height: 100%; overflow: hidden;">
+        <div style="display: flex; flex-direction: row; margin-bottom: 15px; align-items: stretch; flex: 0 0 auto;">
+            <header class="sheet-header" style="flex: 1; margin-bottom: 0; display: flex; flex-direction: column; position: relative;">
+                <a class="sheet-lock" title="{{localize 'KEXBORN.UI.Tooltips.LockToggle'}}" style="position: absolute; top: 0; right: 0; font-size: 20px; cursor: pointer; opacity: 0.8; transition: 0.2s; z-index: 10;">
+                    <i class="fas {{#if isLocked}}fa-lock{{else}}fa-lock-open{{/if}}"></i>
+                </a>
+                <div style="display: flex; flex-direction: row; align-items: center; border-bottom: 2px solid; padding-bottom: 5px; margin-bottom: 10px; width: 100%;">
+                    <div style="flex: 0 0 80px; text-align: center; margin-right: 15px;">
+                        <label style="display: block; font-weight: bold; font-size: 12px; letter-spacing: 1px;">{{localize 'KEXBORN.UI.Level'}}</label>
+                        <select name="system.level" style="width: 100%; height: 32px; font-size: 24px; font-weight: bold; text-align: center; border-radius: 5px; cursor: pointer; padding: 0;">
+                            {{selectOptions levels selected=system.level}}
+                        </select>
+                    </div>
+                    <div style="flex: 1;">
+                        <input name="name" type="text" value="{{docName}}" placeholder="{{localize 'KEXBORN.UI.Placeholders.SettlementName'}}" style="width: 100%; font-size: 32px; background: transparent; border: none; padding: 0; margin: 0;"/>
+                    </div>
+                </div>
+                
+                <img src="{{system.banner}}" data-edit="system.banner" style="width: 100%; height: 200px; object-fit: cover; border: 2px solid; border-radius: 5px; cursor: pointer; display: block;" title="{{localize 'KEXBORN.UI.Tooltips.ChangeBanner'}}"/>
+            </header>
+            <nav class="sheet-tabs tabs settlement-sidebar" data-group="primary" style="flex: 0 0 50px; margin-left: 15px; margin-bottom: 0;">
+                <a class="item" data-tab="description" title="{{localize 'KEXBORN.Tabs.Description'}}"><i class="fas fa-book"></i></a>
+                {{#if enableNpcsTab}}<a class="item" data-tab="npcs" title="{{localize 'KEXBORN.Tabs.NPCs'}}"><i class="fas fa-user-friends"></i></a>{{/if}}
+                {{#if enableInfraTab}}<a class="item" data-tab="infrastructure" title="{{localize 'KEXBORN.Tabs.Infrastructure'}}"><i class="fas fa-hammer"></i></a>{{/if}}
+                {{#if enableInfluenceTab}}<a class="item" data-tab="influence" title="{{localize 'KEXBORN.Tabs.Influence'}}"><i class="fas fa-chess-rook"></i></a>{{/if}}
+            </nav>
+        </div>
+        <section class="sheet-body" style="flex: 1; overflow-y: auto; overflow-x: hidden; padding-right: 5px;">
+            <div class="tab description" data-group="primary" data-tab="description">
+                <h2 style="border-bottom: 1px solid; margin-bottom: 15px; text-transform: uppercase;">{{localize 'KEXBORN.Tabs.Description'}}</h2>
+                <div class="prose-editor-container">
+                    {{editor enrichedDescription target="system.description" button=true editable=editable engine="prosemirror" collaborate=false}}
+                </div>
+                
+                {{#unless isLocked}}
+                <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px; border-top: 1px dashed var(--kbm-border-subtle); padding-top: 10px;">
+                    <img src="{{actor.img}}" data-edit="img" style="flex: 0 0 40px; width: 40px; height: 40px; border: 1px solid var(--kbm-border); border-radius: 3px; cursor: pointer; background: rgba(0,0,0,0.1); object-fit: cover;" title="{{localize 'KEXBORN.UI.Tooltips.ChangePortrait'}}"/>
+                    <div style="font-size: 12px; color: var(--kbm-text-muted); line-height: 1.2;">
+                        <b>{{localize 'KEXBORN.UI.Notes.PortraitHoverText1'}}</b> {{localize 'KEXBORN.UI.Notes.PortraitHoverText2'}}<br>
+                        <i>{{localize 'KEXBORN.UI.Notes.PortraitHoverText3'}}</i>
+                    </div>
+                </div>
+                {{/unless}}
+            </div>
+            
+            {{#if enableNpcsTab}}
+            <div class="tab npcs" data-group="primary" data-tab="npcs">
+                <h2 style="border-bottom: 1px solid; margin-bottom: 15px; text-transform: uppercase;">{{localize 'KEXBORN.Tabs.NPCs'}}</h2>
+                <ul class="item-list" style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    {{#each linkedNpcs}}
+                    <li class="item flexrow" data-uuid="{{this.uuid}}" data-list-type="npc" style="border: 2px solid; border-radius: 5px; padding: 10px; align-items: center; position: relative;">
+                        {{#unless ../isLocked}}
+                        <a class="item-control item-delete" title="{{localize 'KEXBORN.UI.Tooltips.RemoveFromCity'}}" style="position: absolute; top: -10px; right: -10px; padding: 3px 6px; border-radius: 50%; font-size: 12px; z-index: 10; background: red;"><i class="fas fa-times"></i></a>
+                        {{/unless}}
+                        <img class="item-edit" src="{{this.img}}" style="flex: 0 0 80px; height: 80px; border-radius: 5px; object-fit: cover; cursor: pointer; margin-right: 15px; border: 2px solid;"/>
+                        <h4 class="item-edit" style="margin: 0; font-size: 24px; cursor: pointer; line-height: 1.1;">{{this.name}}</h4>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/if}}
+            
+            {{#if enableInfraTab}}
+            <div class="tab infrastructure" data-group="primary" data-tab="infrastructure">
+                {{#unless isLocked}}
+                <div style="margin-bottom: 15px; display: flex; align-items: center; justify-content: center; gap: 15px; padding: 8px; background: rgba(0,0,0,0.1); border: 1px dashed var(--kbm-border-subtle); border-radius: 5px;">
+                    <label style="font-weight: bold; font-size: 14px; text-transform: uppercase;">{{localize 'KEXBORN.UI.SettlementGenre'}}</label>
+                    <select name="system.genre" style="flex: 0 0 200px; height: 30px; font-size: 14px; border-radius: 3px; cursor: pointer;">
+                        {{selectOptions availableGenres selected=system.genre}}
+                    </select>
+                    <span style="font-size: 11px; color: var(--kbm-text-muted); opacity: 0.8;">{{localize 'KEXBORN.UI.Tooltips.GenreChangeHint'}}</span>
+                </div>
+                {{/unless}}
+
+                {{#if showSettlementStats}}
+                <div class="flexrow" style="text-align: center; font-weight: bold; margin-bottom: 10px; border-radius: 5px; padding: 10px; border: 1px solid;">
+                    <div><label style="display:block; font-size:16px;">{{localize 'KEXBORN.Stats.Army'}}</label><span style="font-size: 18px;">{{computedStats.army}}</span></div>
+                    <div><label style="display:block; font-size:16px;">{{localize 'KEXBORN.Stats.Law'}}</label><span style="font-size: 18px;">{{computedStats.law}}</span></div>
+                    <div><label style="display:block; font-size:16px;">{{localize 'KEXBORN.Stats.Culture'}}</label><span style="font-size: 18px;">{{computedStats.culture}}</span></div>
+                    <div><label style="display:block; font-size:16px;">{{localize 'KEXBORN.Stats.Wealth'}}</label><span style="font-size: 18px;">{{computedStats.wealth}}</span></div>
+                    <div><label style="display:block; font-size:16px;">{{localize 'KEXBORN.Stats.Health'}}</label><span style="font-size: 18px;">{{computedStats.health}}</span></div>
+                    <div><label style="display:block; font-size:16px;">{{localize 'KEXBORN.Stats.Science'}}</label><span style="font-size: 18px;">{{computedStats.science}}</span></div>
+                </div>
+                {{/if}}
+
+                {{#if isTreeView}}
+                <div class="infrastructure-tree">
+                    {{#each treeCategories}}
+                    <div class="tree-horizontal-category">
+                        <div class="tree-cat-title">{{this.label}}</div>
+                        <div class="tree-category-grid">
+                            <div class="tree-levels-header">I</div>
+                            <div class="tree-levels-header">II</div>
+                            <div class="tree-levels-header">III</div>
+                            <div class="tree-levels-header">IV</div>
+                            <div class="tree-levels-header">V</div>
+                            
+                            {{#each this.rows}}
+                                <div class="tree-cell">{{#each this.[0]}}
+                                    <div class="tree-node {{#if this.isBuilt}}built{{else if this.isAvailable}}available{{else}}locked{{/if}} {{#if this.isBranch}}branch{{/if}}" data-item-id="{{this.id}}" data-tooltip="{{this.tooltip}}"><img src="{{this.img}}"/><span>{{this.name}}</span></div>
+                                {{/each}}</div>
+                                <div class="tree-cell">{{#each this.[1]}}
+                                    <div class="tree-node {{#if this.isBuilt}}built{{else if this.isAvailable}}available{{else}}locked{{/if}} {{#if this.isBranch}}branch{{/if}}" data-item-id="{{this.id}}" data-tooltip="{{this.tooltip}}"><img src="{{this.img}}"/><span>{{this.name}}</span></div>
+                                {{/each}}</div>
+                                <div class="tree-cell">{{#each this.[2]}}
+                                    <div class="tree-node {{#if this.isBuilt}}built{{else if this.isAvailable}}available{{else}}locked{{/if}} {{#if this.isBranch}}branch{{/if}}" data-item-id="{{this.id}}" data-tooltip="{{this.tooltip}}"><img src="{{this.img}}"/><span>{{this.name}}</span></div>
+                                {{/each}}</div>
+                                <div class="tree-cell">{{#each this.[3]}}
+                                    <div class="tree-node {{#if this.isBuilt}}built{{else if this.isAvailable}}available{{else}}locked{{/if}} {{#if this.isBranch}}branch{{/if}}" data-item-id="{{this.id}}" data-tooltip="{{this.tooltip}}"><img src="{{this.img}}"/><span>{{this.name}}</span></div>
+                                {{/each}}</div>
+                                <div class="tree-cell">{{#each this.[4]}}
+                                    <div class="tree-node {{#if this.isBuilt}}built{{else if this.isAvailable}}available{{else}}locked{{/if}} {{#if this.isBranch}}branch{{/if}}" data-item-id="{{this.id}}" data-tooltip="{{this.tooltip}}"><img src="{{this.img}}"/><span>{{this.name}}</span></div>
+                                {{/each}}</div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+                {{else}}
+                {{#each infrastructure}}
+                {{#if this.items.length}}
+                <h3 style="border-bottom: 1px solid; margin-top: 15px; text-transform: uppercase;">{{this.label}}</h3>
+                <ul class="item-list" style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px;">
+                    {{#each this.items}}
+                    <li class="item flexrow" data-item-id="{{this.id}}" {{#unless ../../isLocked}}draggable="true"{{/unless}} style="border: 1px solid; border-radius: 5px; padding: 8px; align-items: stretch; position: relative;">
+                        {{#unless ../../isLocked}}
+                        <div class="item-drag-handle" style="position: absolute; left: -12px; top: 50%; transform: translateY(-50%); font-size: 12px; cursor: grab;"><i class="fas fa-grip-vertical"></i></div>
+                        {{/unless}}
+                        <img class="item-edit" src="{{this.img}}" style="flex: 0 0 50px; height: 50px; border: 2px solid; border-radius: 3px; object-fit: cover; cursor: pointer; margin-right: 10px;"/>
+                        <div class="flexcol" style="flex: 1;">
+                            <div class="flexrow" style="align-items: center;">
+                                <span style="background: rgba(0,0,0,0.5); color: #fff; border-radius: 50%; width: 20px; height: 20px; display: inline-flex; justify-content: center; align-items: center; font-weight: bold; font-size: 12px; margin-right: 8px; flex: 0 0 20px;" title="{{localize 'KEXBORN.UI.Tooltips.StructureLevel'}}">{{this.safeLevel}}</span>
+                                <h4 class="item-edit" style="margin: 0; font-size: 18px; flex: 1; cursor: pointer;">{{this.name}}</h4>
+                                {{#unless ../../isLocked}}
+                                <div class="item-controls"><a class="item-control item-delete" title="{{localize 'KEXBORN.UI.Tooltips.Remove'}}"><i class="fas fa-trash"></i></a></div>
+                                {{/unless}}
+                            </div>
+                            <div style="font-size: 12px; margin: 5px 0; line-height: 1.3;">{{{this.system.description}}}</div>
+                            <div class="item-bonuses" style="display: flex; gap: 4px; flex-wrap: wrap; border-top: 1px dashed rgba(122,32,13,0.2); padding-top: 5px;">
+                                {{#if this.formattedBonuses.army}}<span class="bonus-badge">{{localize 'KEXBORN.Stats.Army'}} {{this.formattedBonuses.army}}</span>{{/if}}
+                                {{#if this.formattedBonuses.law}}<span class="bonus-badge">{{localize 'KEXBORN.Stats.Law'}} {{this.formattedBonuses.law}}</span>{{/if}}
+                                {{#if this.formattedBonuses.culture}}<span class="bonus-badge">{{localize 'KEXBORN.Stats.Culture'}} {{this.formattedBonuses.culture}}</span>{{/if}}
+                                {{#if this.formattedBonuses.wealth}}<span class="bonus-badge">{{localize 'KEXBORN.Stats.Wealth'}} {{this.formattedBonuses.wealth}}</span>{{/if}}
+                                {{#if this.formattedBonuses.health}}<span class="bonus-badge">{{localize 'KEXBORN.Stats.Health'}} {{this.formattedBonuses.health}}</span>{{/if}}
+                                {{#if this.formattedBonuses.science}}<span class="bonus-badge">{{localize 'KEXBORN.Stats.Science'}} {{this.formattedBonuses.science}}</span>{{/if}}
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+                {{/each}}
+                {{/if}}
+            </div>
+            {{/if}}
+
+            {{#if enableInfluenceTab}}
+            <div class="tab influence" data-group="primary" data-tab="influence">
+                <h2 style="border-bottom: 2px solid; margin-bottom: 15px; text-transform: uppercase;">{{localize 'KEXBORN.Tabs.Factions'}}</h2>
+                <ul class="item-list" style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+                    {{#each factions}}
+                    <li class="item flexrow" data-item-id="{{this.id}}" data-tooltip="{{this.tooltip}}" {{#unless ../isLocked}}draggable="true"{{/unless}} style="border: 2px solid; border-radius: 5px; padding: 10px; position: relative; align-items: stretch;">
+                        {{#unless ../isLocked}}
+                        <div class="item-drag-handle" style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); padding: 1px 15px; border-radius: 10px; font-size: 12px; cursor: grab; z-index: 2; background: red;"><i class="fas fa-equals"></i></div>
+                        <a class="item-control item-delete" title="{{localize 'KEXBORN.UI.Tooltips.Remove'}}" style="position: absolute; top: 5px; right: 8px; font-size: 14px;"><i class="fas fa-trash"></i></a>
+                        {{/unless}}
+                        <img class="item-edit" src="{{this.img}}" style="flex: 0 0 70px; height: 70px; border: 3px solid; object-fit: cover; cursor: pointer;"/>
+                        <div class="flexcol" style="flex: 1; padding-left: 15px; justify-content: space-between;">
+                            <h3 class="item-edit" style="margin: 0; font-size: 26px; cursor: pointer; line-height: 1.1; padding-right: 15px;">{{this.name}}</h3>
+                            <div class="flexrow" style="align-items: center; margin-bottom: 2px;">
+                                <label style="flex: 0 0 auto; margin-right: 10px; font-size: 13px;">{{localize 'KEXBORN.Stats.Influence'}}:</label>
+                                <input type="range" class="influence-slider" value="{{this.system.influence}}" min="0" max="10" style="flex: 1; cursor: pointer; border-radius: 5px; height: 6px;"/>
+                                <span style="flex: 0 0 20px; text-align: right; font-weight: bold; font-size: 18px;">{{this.system.influence}}</span>
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+                <h2 style="border-bottom: 2px solid; margin-bottom: 15px; text-transform: uppercase;">{{localize 'KEXBORN.Tabs.Organizations'}}</h2>
+                <ul class="item-list" style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    {{#each linkedOrganizations}}
+                    <li class="item flexrow" data-uuid="{{this.uuid}}" data-list-type="organization" data-tooltip="{{this.tooltip}}" style="border: 2px solid; border-radius: 5px; padding: 10px; position: relative; align-items: stretch;">
+                        {{#unless ../isLocked}}
+                        <a class="item-control item-delete" title="{{localize 'KEXBORN.UI.Tooltips.RemoveFromCity'}}" style="position: absolute; top: -10px; right: -10px; padding: 3px 6px; border-radius: 50%; font-size: 12px; z-index: 10; background: red;"><i class="fas fa-times"></i></a>
+                        {{/unless}}
+                        <img class="item-edit" src="{{this.img}}" style="flex: 0 0 80px; height: 80px; border: 3px solid; object-fit: cover; cursor: pointer;"/>
+                        <div class="flexcol" style="flex: 1; padding-left: 15px; justify-content: flex-start;">
+                            <div class="flexrow" style="align-items: flex-start; justify-content: space-between; margin-bottom: 5px; gap: 10px;">
+                                <h3 class="item-edit" style="margin: 0; font-size: 22px; cursor: pointer; line-height: 1.1; flex: 1; min-width: 0;">{{this.name}}</h3>
+                                <div style="display: flex; gap: 4px; align-items: center; position: relative; z-index: 50; flex: 0 0 auto;">
+                                    {{#each this.influenceTokens}}
+                                    <span class="token-radio org-token-radio {{#if this.active}}active{{/if}}" data-value="{{this.value}}" title="{{this.value}}"></span>
+                                    {{/each}}
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 4px; margin-bottom: 8px;">
+                                {{#if this.system.subtypes.strongmen}}<span class="subtype-badge">{{localize 'KEXBORN.OrgSubtypes.Strongmen'}}</span>{{/if}}
+                                {{#if this.system.subtypes.agility}}<span class="subtype-badge">{{localize 'KEXBORN.OrgSubtypes.Agility'}}</span>{{/if}}
+                                {{#if this.system.subtypes.sages}}<span class="subtype-badge">{{localize 'KEXBORN.OrgSubtypes.Sages'}}</span>{{/if}}
+                            </div>
+                            <div class="flexrow" style="align-items: center; font-size: 12px; font-weight: bold; padding: 4px; border-radius: 4px; text-align: center; gap: 5px; background: rgba(0,0,0,0.05);">
+                                <div style="flex: 1; display: flex; align-items: center; justify-content: center;" title="{{localize 'KEXBORN.Stats.Attack'}}">
+                                    <i class="fas fa-crosshairs"></i>
+                                    <input type="number" class="org-stat-input" name="system.stats.attack" value="{{this.system.stats.attack}}"/>
+                                </div>
+                                <div style="flex: 1; display: flex; align-items: center; justify-content: center;" title="{{localize 'KEXBORN.Stats.Resources'}}">
+                                    <i class="fas fa-gem"></i>
+                                    <input type="number" class="org-stat-input" name="system.stats.resources" value="{{this.system.stats.resources}}"/>
+                                </div>
+                                <div style="flex: 1; display: flex; align-items: center; justify-content: center;" title="{{localize 'KEXBORN.Stats.Vitality'}}">
+                                    <i class="fas fa-heart"></i>
+                                    <input type="number" class="org-stat-input" name="system.stats.vitality" value="{{this.system.stats.vitality}}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/if}}
+        </section>
+    </div>
+</form>

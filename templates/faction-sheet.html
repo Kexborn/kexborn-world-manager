@@ -1,0 +1,32 @@
+<form class="{{cssClass}} flexcol kbm-window theme-{{theme}}" autocomplete="off" style="padding: 15px; height: 100%;">
+    <header class="sheet-header" style="margin-bottom: 15px; flex: 0 0 auto;">
+        <div style="display: flex; flex-direction: row; gap: 15px; align-items: center; width: 100%;">
+            <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="80" width="80" style="border: 2px solid; flex: 0 0 80px; object-fit: cover;"/>
+            <h1 class="charname" style="flex: 1; border-bottom: 2px solid; margin: 0; padding-bottom: 5px; display: flex; align-items: center; min-width: 0;">
+                <input name="name" type="text" value="{{docName}}" placeholder="{{localize 'KEXBORN.UI.Placeholders.FactionName'}}" style="width: 100%; font-size: 28px; background: transparent; border: none; margin: 0; padding: 0; min-width: 0;"/>
+            </h1>
+        </div>
+    </header>
+    <nav class="sheet-tabs tabs" data-group="primary" style="margin-bottom: 15px; font-weight: bold; border-bottom: 2px solid; font-size: 22px; flex: 0 0 auto;">
+        <a class="item" data-tab="description">{{localize 'KEXBORN.Tabs.Description'}}</a>
+        <a class="item" data-tab="npcs">{{localize 'KEXBORN.Tabs.NPCs'}}</a>
+    </nav>
+    <section class="sheet-body" style="flex: 1; overflow-y: auto; padding-right: 5px;">
+        <div class="tab description" data-group="primary" data-tab="description">
+            <div class="prose-editor-container">
+                {{editor enrichedDescription target="system.description" button=true editable=editable engine="prosemirror" collaborate=false}}
+            </div>
+        </div>
+        <div class="tab npcs" data-group="primary" data-tab="npcs">
+            <ul class="item-list" style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                {{#each linkedNpcs}}
+                <li class="item flexrow" data-uuid="{{this.uuid}}" data-list-type="npc" style="border: 1px solid; border-radius: 5px; padding: 5px; align-items: center; position: relative;">
+                    <a class="item-control item-delete" title="{{localize 'KEXBORN.UI.Tooltips.Remove'}}" style="position: absolute; top: -5px; right: -5px; padding: 2px 5px; border-radius: 50%; font-size: 10px; z-index: 10; background: red;"><i class="fas fa-times"></i></a>
+                    <img class="item-edit" src="{{this.img}}" style="flex: 0 0 40px; height: 40px; border-radius: 5px; object-fit: cover; cursor: pointer; margin-right: 10px; border: 1px solid;"/>
+                    <h4 class="item-edit" style="margin: 0; font-size: 20px; cursor: pointer;">{{this.name}}</h4>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+</form>

@@ -1,0 +1,15 @@
+<form class="{{cssClass}} flexcol kbm-window theme-{{theme}}" autocomplete="off" style="padding: 15px; height: 100%;">
+    <header class="sheet-header" style="margin-bottom: 15px; flex: 0 0 auto;">
+        <div style="display: flex; flex-direction: row; gap: 15px; align-items: center; width: 100%;">
+            <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="60" width="60" style="border: 2px solid; flex: 0 0 60px; object-fit: cover;"/>
+            <h1 class="charname" style="flex: 1; border-bottom: 2px solid; margin: 0; padding-bottom: 5px; display: flex; align-items: center; min-width: 0;">
+                <input name="name" type="text" value="{{docName}}" placeholder="{{localize 'KEXBORN.UI.Placeholders.FeatureName'}}" style="width: 100%; font-size: 24px; background: transparent; border: none; margin: 0; padding: 0; min-width: 0;"/>
+            </h1>
+        </div>
+    </header>
+    <section class="sheet-body" style="flex: 1; overflow-y: auto; padding-right: 5px;">
+        <div class="prose-editor-container">
+            {{editor enrichedDescription target="system.description" button=true editable=editable engine="prosemirror" collaborate=false}}
+        </div>
+    </section>
+</form>

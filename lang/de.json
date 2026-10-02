@@ -1,0 +1,181 @@
+{
+  "TYPES": {
+    "Actor": {
+      "kexborn-world-manager.special-place": "Besonderer Ort",
+      "kexborn-world-manager.settlement": "Siedlung",
+      "kexborn-world-manager.organization": "Organisation"
+    },
+    "Item": {
+      "kexborn-world-manager.faction": "Fraktion",
+      "kexborn-world-manager.city-structure": "Stadtstruktur",
+      "kexborn-world-manager.organization-feature": "Organisationsmerkmal"
+    }
+  },
+  "KEXBORN": {
+    "Settings": {
+      "ThemeName": "Design",
+      "ThemeHint": "Wählen Sie den visuellen Stil für die Bögen (gilt für alle Spieler).",
+      "ThemeDND": "Classic ⦁ Light",
+      "ThemeDNDDark": "Classic ⦁ Dark",
+      "ThemeDark": "Dark Fantasy",
+      "ThemeScifiLightBlue": "Sci-Fi ⦁ Light blue",
+      "ThemeScifiDarkBlue": "Sci-Fi ⦁ Dark blue",
+      "ThemeScifiRed": "Sci-Fi ⦁ Red",
+      "ThemeScifiGreen": "Sci-Fi ⦁ Green",
+      "ThemeScifiOrange": "Sci-Fi ⦁ Orange",
+      "ThemeScifiViolet": "Sci-Fi ⦁ Violet",
+      "ThemeScifiGrey": "Sci-Fi ⦁ Grey",
+      "ThemeUniversal": "Universal ⦁ Light",
+      "ThemeUniversalDark": "Universal ⦁ Dark",
+      
+      "InfraViewName": "Infrastruktur-Anzeige",
+      "InfraViewHint": "Wählen Sie, wie der Struktur-Reiter in Siedlungen aussehen soll.",
+      "InfraViewList": "Klassische Liste (Drag & Drop aus Ordnern)",
+      "InfraViewTree": "Entwicklungsbaum (interaktive Schaltflächen)",
+      
+      "EnableNpcsTabName": "Reiter: Bekannte Gesichter",
+      "EnableNpcsTabHint": "Zeigt den Reiter für bekannte Gesichter in Siedlungen an.",
+      
+      "EnableInfraTabName": "Reiter: Infrastruktur",
+      "EnableInfraTabHint": "Zeigt den Struktur-Reiter in Siedlungen an.",
+      
+      "ShowSettlementStatsName": "Siedlungsstatistiken",
+      "ShowSettlementStatsHint": "Zeigt den Block mit Armee-, Gesetz-, Kulturpunkten usw. auf dem Infrastruktur-Reiter der Siedlung an.",
+      
+      "EnableInfluenceTabName": "Reiter: Einfluss",
+      "EnableInfluenceTabHint": "Zeigt den Fraktionen- und Organisationen-Reiter an.",
+      
+      "GenreMenuName": "Genres und Kategorien-Editor",
+      "GenreMenuLabel": "Editor öffnen",
+      "GenreMenuHint": "Passen Sie die Liste der verfügbaren Strukturen für Fantasy, Sci-Fi und die moderne Zeit an.",
+      "GenreMenuTitle": "Einstellungen für Genres und Kategorien"
+    },
+    
+    "Genres": {
+      "Fantasy": "Fantasy",
+      "Modern": "Moderne Zeit",
+      "Scifi": "Sci-Fi",
+      "Universal": "Universal (Multi-Genre)"
+    },
+    
+    "Categories": {
+      "Power": "Macht & Gesetz",
+      "Cult": "Kult & Wohlfahrt",
+      "Entertainment": "Freizeit & Unterhaltung",
+      "Education": "Wissenschaft & Bildung",
+      "EducationTech": "Wissenschaft & Technologie",
+      "Industry": "Industrie",
+      "Trade": "Handel & Logistik",
+      "Military": "Militär & Krieg",
+      "Special": "Besondere",
+      "NewCategory": "Neue Kategorie"
+    },
+    
+    "Tabs": {
+      "Description": "Beschreibung",
+      "NPCs": "Bekannte Gesichter",
+      "Infrastructure": "Infrastruktur",
+      "Influence": "Einfluss",
+      "Stats": "Statistiken",
+      "Bonuses": "Boni",
+      "Factions": "Fraktionen",
+      "Organizations": "Organisationen"
+    },
+    
+    "Stats": {
+      "Army": "Armee",
+      "Law": "Gesetz",
+      "Culture": "Kultur",
+      "Wealth": "Wohlstand",
+      "Health": "Gesundheit",
+      "Science": "Wissenschaft",
+      "Attack": "Angriff",
+      "Resources": "Ressourcen",
+      "Vitality": "Vitalität",
+      "Zeal": "Eifer",
+      "Influence": "Einfluss"
+    },
+    
+    "OrgSubtypes": {
+      "Title": "Organisationstypen",
+      "Strongmen": "Kraftprotze",
+      "Agility": "Akrobaten",
+      "Sages": "Gelehrte"
+    },
+    
+    "UI": {
+      "Level": "STUFE",
+      "LevelNormal": "Stufe",
+      "Genre": "Genre",
+      "Category": "Kategorie",
+      "Priority": "Priorität",
+      "Features": "Merkmale",
+      "SettlementGenre": "Siedlungsgenre:",
+      "RequiredStructures": "Benötigte Strukturen\n(Baum-Verknüpfungen):",
+      
+      "Placeholders": {
+        "SettlementName": "Name der Siedlung",
+        "OrganizationName": "Name der Organisation",
+        "FactionName": "Name der Fraktion",
+        "StructureName": "Name der Struktur",
+        "FeatureName": "Name des Merkmals",
+        "SpecialPlaceName": "Name des besonderen Ortes",
+        "Link1": "Verknüpfung 1",
+        "Link2": "Verknüpfung 2",
+        "Link3": "Verknüpfung 3"
+      },
+      
+      "Tooltips": {
+        "ChangeBanner": "Klicken, um das Bild zu ändern",
+        "LockToggle": "Bearbeitungssperre umschalten",
+        "RemoveFromCity": "Aus der Stadt entfernen",
+        "Remove": "Entfernen",
+        "StructureLevel": "Strukturniveau",
+        "PriorityHint": "Je niedriger die Zahl, desto höher das Gebäude (0 - ganz oben)",
+        "GenreChangeHint": "(Ein Wechsel des Genres ändert die Liste der verfügbaren Kategorien)",
+        "Show": "Anzeigen",
+        "Hide": "Verbergen",
+        "DeleteForever": "Für immer löschen",
+        "DefaultCategory": "Standardkategorie",
+        "ChangePortrait": "Akteursporträt ändern (für Image Hover)"
+      },
+      
+      "Notes": {
+        "BonusesHint": "Geben Sie an, welche Werte sich verbessern oder verschlechtern (Sie können negative Zahlen wie -1 eingeben).",
+        "GenreMenuDesc": "Hier können Sie Kategorien für jedes Genre konfigurieren. Standardkategorien können nicht gelöscht, aber ausgeblendet werden.",
+        "PortraitHoverText1": "Akteursporträt (Image Hover):",
+        "PortraitHoverText2": "Klicken Sie auf das Symbol links, um ein transparentes PNG hochzuladen.",
+        "PortraitHoverText3": "Dies ersetzt das Standard-Foundry-Bild beim Darüberschweben über einen unsichtbaren Token."
+      },
+      
+      "Buttons": {
+        "AddCategory": "Eigene Kategorie hinzufügen",
+        "SaveSettings": "Einstellungen speichern"
+      },
+      
+      "Table": {
+        "CategoryName": "Kategoriename",
+        "Actions": "Aktionen"
+      }
+    },
+    
+    "Notifications": {
+      "UnlockToEdit": "Entsperren Sie den Bogen, um Objekte hinzuzufügen.",
+      "UnlockToEditInfra": "Entsperren Sie den Bogen (Schloss-Symbol), um die Infrastruktur zu ändern.",
+      "OrgAlreadyAdded": "Organisation wurde bereits hinzugefügt.",
+      "NpcAlreadyAdded": "Charakter wurde bereits hinzugefügt.",
+      "AlreadyAdded": "\"{name}\" ist bereits hinzugefügt!",
+      "LevelTooHigh": "Bauen nicht möglich! Das Gebäudelevel ({itemLvl}) ist höher als das Stadtlevel ({cityLvl}).",
+      "OnlyFeaturesAllowed": "Sie können einer Organisation nur Merkmale hinzufügen!",
+      "BuildPrerequisitesFirst": "Bauen Sie zuerst die erforderlichen Strukturen!",
+      "OriginalNotFound": "Originalgebäude nicht in der Welt gefunden!"
+    },
+    
+    "Tree": {
+      "Required": "Benötigt:",
+      "RequiredCityLevel": "Benötigtes Stadtlevel:",
+      "CurrentLevel": "Aktuell:",
+      "ControlsHint": "LMB - bauen/abreißen<br/>RMB - Details öffnen"
+    }
+  }
+}

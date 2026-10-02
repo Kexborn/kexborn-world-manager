@@ -1,0 +1,48 @@
+{
+  "id": "kexborn-world-manager",
+  "title": "Kexborn.mod - Менеджер Мира",
+  "description": "<p>Добавляет кастомные листы городов, фракций и сооружений</p>",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Kexborn",
+      "url": "https://boosty.to/kexborn",
+      "flags": {}
+    }
+  ],
+  "compatibility": {
+    "minimum": "12",
+    "verified": "14.367"
+  },
+  "esmodules": [
+    "main.js"
+  ],
+  "styles": [
+    "kexborn.css"
+  ],
+  "languages": [
+    { "lang": "ru", "name": "Русский", "path": "lang/ru.json", "flags": {} },
+    { "lang": "en", "name": "English", "path": "lang/en.json", "flags": {} },
+    { "lang": "de", "name": "Deutsch", "path": "lang/de.json", "flags": {} },
+    { "lang": "es", "name": "Español", "path": "lang/es.json", "flags": {} },
+    { "lang": "fr", "name": "Français", "path": "lang/fr.json", "flags": {} },
+    { "lang": "it", "name": "Italiano", "path": "lang/it.json", "flags": {} },
+    { "lang": "pt", "name": "Português", "path": "lang/pt.json", "flags": {} },
+    { "lang": "pl", "name": "Polski", "path": "lang/pl.json", "flags": {} },
+    { "lang": "ja", "name": "日本語", "path": "lang/ja.json", "flags": {} },
+    { "lang": "zh", "name": "中文", "path": "lang/zh.json", "flags": {} }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "settlement": {},
+      "organization": {},
+      "special-place": {}
+    },
+    "Item": {
+      "faction": {},
+      "city-structure": {},
+      "organization-feature": {}
+    }
+  },
+  "flags": {}
+}

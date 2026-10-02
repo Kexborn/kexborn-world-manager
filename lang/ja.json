@@ -1,0 +1,181 @@
+{
+  "TYPES": {
+    "Actor": {
+      "kexborn-world-manager.special-place": "特別な場所",
+      "kexborn-world-manager.settlement": "居住地",
+      "kexborn-world-manager.organization": "組織"
+    },
+    "Item": {
+      "kexborn-world-manager.faction": "派閥",
+      "kexborn-world-manager.city-structure": "都市の施設",
+      "kexborn-world-manager.organization-feature": "組織の特徴"
+    }
+  },
+  "KEXBORN": {
+    "Settings": {
+      "ThemeName": "テーマ",
+      "ThemeHint": "シートの視覚スタイルを選択します（全プレイヤーに適用されます）。",
+      "ThemeDND": "Classic ⦁ Light",
+      "ThemeDNDDark": "Classic ⦁ Dark",
+      "ThemeDark": "Dark Fantasy",
+      "ThemeScifiLightBlue": "Sci-Fi ⦁ Light blue",
+      "ThemeScifiDarkBlue": "Sci-Fi ⦁ Dark blue",
+      "ThemeScifiRed": "Sci-Fi ⦁ Red",
+      "ThemeScifiGreen": "Sci-Fi ⦁ Green",
+      "ThemeScifiOrange": "Sci-Fi ⦁ Orange",
+      "ThemeScifiViolet": "Sci-Fi ⦁ Violet",
+      "ThemeScifiGrey": "Sci-Fi ⦁ Grey",
+      "ThemeUniversal": "Universal ⦁ Light",
+      "ThemeUniversalDark": "Universal ⦁ Dark",
+      
+      "InfraViewName": "インフラの表示",
+      "InfraViewHint": "居住地の施設タブの表示方法を選択します。",
+      "InfraViewList": "クラシックリスト（フォルダからドラッグ＆ドロップ）",
+      "InfraViewTree": "開発ツリー（インタラクティブボタン）",
+      
+      "EnableNpcsTabName": "タブ：見知った顔",
+      "EnableNpcsTabHint": "居住地に見知った顔タブを表示します。",
+      
+      "EnableInfraTabName": "タブ：インフラ",
+      "EnableInfraTabHint": "居住地に施設タブを表示します。",
+      
+      "ShowSettlementStatsName": "居住地のステータス",
+      "ShowSettlementStatsHint": "居住地のインフラタブに軍事、法、文化などのポイントブロックを表示します。",
+      
+      "EnableInfluenceTabName": "タブ：影響力",
+      "EnableInfluenceTabHint": "派閥と組織のタブを表示します。",
+      
+      "GenreMenuName": "ジャンルとカテゴリのエディタ",
+      "GenreMenuLabel": "エディタを開く",
+      "GenreMenuHint": "ファンタジー、SF、現代で利用可能な施設のリストをカスタマイズします。",
+      "GenreMenuTitle": "ジャンルとカテゴリの設定"
+    },
+    
+    "Genres": {
+      "Fantasy": "ファンタジー",
+      "Modern": "現代",
+      "Scifi": "SF",
+      "Universal": "ユニバーサル（全ジャンル）"
+    },
+    
+    "Categories": {
+      "Power": "権力と法",
+      "Cult": "信仰と福祉",
+      "Entertainment": "娯楽",
+      "Education": "科学と教育",
+      "EducationTech": "科学と技術",
+      "Industry": "産業",
+      "Trade": "商業と物流",
+      "Military": "軍事と戦争",
+      "Special": "特別",
+      "NewCategory": "新しいカテゴリ"
+    },
+    
+    "Tabs": {
+      "Description": "説明",
+      "NPCs": "見知った顔",
+      "Infrastructure": "インフラ",
+      "Influence": "影響力",
+      "Stats": "ステータス",
+      "Bonuses": "ボーナス",
+      "Factions": "派閥",
+      "Organizations": "組織"
+    },
+    
+    "Stats": {
+      "Army": "軍事",
+      "Law": "法",
+      "Culture": "文化",
+      "Wealth": "富",
+      "Health": "健康",
+      "Science": "科学",
+      "Attack": "攻撃",
+      "Resources": "資源",
+      "Vitality": "活力",
+      "Zeal": "熱意",
+      "Influence": "影響力"
+    },
+    
+    "OrgSubtypes": {
+      "Title": "組織のサブタイプ",
+      "Strongmen": "怪力",
+      "Agility": "軽業",
+      "Sages": "賢者"
+    },
+    
+    "UI": {
+      "Level": "レベル",
+      "LevelNormal": "レベル",
+      "Genre": "ジャンル",
+      "Category": "カテゴリ",
+      "Priority": "優先度",
+      "Features": "特徴",
+      "SettlementGenre": "居住地のジャンル：",
+      "RequiredStructures": "必要な施設\n（ツリーリンク）：",
+      
+      "Placeholders": {
+        "SettlementName": "居住地の名前",
+        "OrganizationName": "組織の名前",
+        "FactionName": "派閥の名前",
+        "StructureName": "施設の名前",
+        "FeatureName": "特徴の名前",
+        "SpecialPlaceName": "特別な場所の名前",
+        "Link1": "リンク 1",
+        "Link2": "リンク 2",
+        "Link3": "リンク 3"
+      },
+      
+      "Tooltips": {
+        "ChangeBanner": "クリックして画像を変更",
+        "LockToggle": "編集ロックを切り替え",
+        "RemoveFromCity": "都市から削除",
+        "Remove": "削除",
+        "StructureLevel": "施設レベル",
+        "PriorityHint": "数字が小さいほど施設が上に配置されます（0 - 最上部）",
+        "GenreChangeHint": "（ジャンルを変更すると利用可能なカテゴリのリストが変わります）",
+        "Show": "表示",
+        "Hide": "非表示",
+        "DeleteForever": "完全に削除",
+        "DefaultCategory": "デフォルトカテゴリ",
+        "ChangePortrait": "アクターのポートレートを変更（Image Hover用）"
+      },
+      
+      "Notes": {
+        "BonusesHint": "どのステータスが向上または減少するかを指定します（例：-1などの負の数も入力可能です）。",
+        "GenreMenuDesc": "ここで各ジャンルのカテゴリを設定できます。標準カテゴリは削除できませんが、非表示にすることは可能です。",
+        "PortraitHoverText1": "アクターのポートレート（Image Hover用）：",
+        "PortraitHoverText2": "左側のアイコンをクリックして透明なPNGをアップロードしてください。",
+        "PortraitHoverText3": "これにより、透明なトークンにカーソルを合わせたときに標準のFoundry画像が置き換わります。"
+      },
+      
+      "Buttons": {
+        "AddCategory": "独自のカテゴリを追加",
+        "SaveSettings": "設定を保存"
+      },
+      
+      "Table": {
+        "CategoryName": "カテゴリ名",
+        "Actions": "アクション"
+      }
+    },
+    
+    "Notifications": {
+      "UnlockToEdit": "オブジェクトを追加するにはシートのロックを解除してください。",
+      "UnlockToEditInfra": "インフラを変更するにはシートのロック（南京錠アイコン）を解除してください。",
+      "OrgAlreadyAdded": "組織はすでに追加されています。",
+      "NpcAlreadyAdded": "キャラクターはすでに追加されています。",
+      "AlreadyAdded": "「{name}」はすでに追加されています！",
+      "LevelTooHigh": "建設できません！建物のレベル（{itemLvl}）が都市のレベル（{cityLvl}）より高いです。",
+      "OnlyFeaturesAllowed": "組織には「特徴」のみを追加できます！",
+      "BuildPrerequisitesFirst": "まず必要な施設を建設してください！",
+      "OriginalNotFound": "ワールド内に元の建物が見つかりません！"
+    },
+    
+    "Tree": {
+      "Required": "必要：",
+      "RequiredCityLevel": "必要な都市レベル：",
+      "CurrentLevel": "現在：",
+      "ControlsHint": "左クリック - 建設/解体<br/>右クリック - 詳細を開く"
+    }
+  }
+}
