@@ -2,11 +2,11 @@
   "id": "kexborn-world-manager",
   "title": "Kexborn.mod - Менеджер Мира",
   "description": "<p>Добавляет кастомные листы городов, фракций и сооружений</p>",
-  "version": "1.0.0",
+  "version": "1.0.1",
   
   "url": "https://github.com/Kexborn/kexborn-world-manager",
   "manifest": "https://github.com/Kexborn/kexborn-world-manager/releases/latest/download/module.json",
-  "download": "https://github.com/Kexborn/kexborn-world-manager/releases/download/v1.0.0/kexborn-world-manager.zip",  
+  "download": "https://github.com/Kexborn/kexborn-world-manager/releases/download/v1.0.1/kexborn-world-manager.zip",  
 
   "authors": [
     {
@@ -29,14 +29,6 @@
   "languages": [
     { "lang": "ru", "name": "Русский", "path": "lang/ru.json", "flags": {} },
     { "lang": "en", "name": "English", "path": "lang/en.json", "flags": {} },
-    { "lang": "de", "name": "Deutsch", "path": "lang/de.json", "flags": {} },
-    { "lang": "es", "name": "Español", "path": "lang/es.json", "flags": {} },
-    { "lang": "fr", "name": "Français", "path": "lang/fr.json", "flags": {} },
-    { "lang": "it", "name": "Italiano", "path": "lang/it.json", "flags": {} },
-    { "lang": "pt", "name": "Português", "path": "lang/pt.json", "flags": {} },
-    { "lang": "pl", "name": "Polski", "path": "lang/pl.json", "flags": {} },
-    { "lang": "ja", "name": "日本語", "path": "lang/ja.json", "flags": {} },
-    { "lang": "zh", "name": "中文", "path": "lang/zh.json", "flags": {} }
   ],
   "documentTypes": {
     "Actor": {
