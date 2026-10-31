@@ -28,7 +28,7 @@
   ],
   "languages": [
     { "lang": "ru", "name": "Русский", "path": "lang/ru.json", "flags": {} },
-    { "lang": "en", "name": "English", "path": "lang/en.json", "flags": {} },
+    { "lang": "en", "name": "English", "path": "lang/en.json", "flags": {} }
   ],
   "documentTypes": {
     "Actor": {
